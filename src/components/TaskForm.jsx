@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import {Button} from '@material-ui/core';
+import {TextField} from '@material-ui/core';
 
-const FormTodo = (props) => {
+const TaskForm = (props) => {
   const { handleAddItem } = props;
   const [description, setDescription] = useState("");
   const handleSubmit = e => {
@@ -17,23 +19,24 @@ const FormTodo = (props) => {
     <form onSubmit={handleSubmit}>
       <div className="todo-list">
         <div className="item-input">
-          <input
-            type="text"
+          <TextField 
             className="text"
+            label="Agregar una tarea..." 
             value={description}
-            placeholder="Detalles de la tarea..."
+            variant="outlined"
             onChange={(e) => setDescription(e.target.value)}
           />
-          <button
-            className="button pink"
-            disabled={description ? "" : "disabled"}
-          >
-            Agregar tarea
-          </button>
+          <Button
+           type="submit"
+           color="primary" 
+           variant="contained" 
+           disabled={description ? "" : "disabled"}
+           > Agregar tarea 
+          </Button>
         </div>
       </div>
     </form>
   );
 };
 
-export default FormTodo;
+export default TaskForm;

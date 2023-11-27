@@ -1,5 +1,7 @@
 import React from "react";
-import Checkbox from "./Checkbox";
+import TaskItem from "./TaskItem";
+
+import {Button} from '@material-ui/core';
 
 const TaskList = props => {
   const { list, setList } = props;
@@ -20,16 +22,14 @@ const TaskList = props => {
   };
 
   const chk = list.map(item => (
-    <Checkbox key={item.id} data={item} onChange={onChangeStatus} />
+    <TaskItem key={item.id} data={item} onChange={onChangeStatus} />
   ));
   return (
     <div className="todo-list">
-      {list.length ? chk : "No tasks"}
+      {list.length ? chk : "Exclente! No hay nada pendiente!"}
       {list.length ? (
         <p>
-          <button className="button blue" onClick={onClickRemoveItem}>
-            Eliminar todas las completas
-          </button>
+          <Button color="secondary" variant="contained" onClick={onClickRemoveItem}> Eliminar todas las completadas! </Button>
         </p>
       ) : null}
     </div>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import TaskList from "./TaskList";
-import FormTodo from "./FormTodo";
+import TaskForm from "./TaskForm";
 
-const Container = () => {
+const ListaDeTareas = () => {
   const [list, setList] = useState([]);
 
   const handleAddItem = addItem => {
@@ -11,10 +11,10 @@ const Container = () => {
   };
   return (
     <div>
-      <FormTodo handleAddItem={handleAddItem} />
+      <TaskForm handleAddItem={handleAddItem} />
       <TaskList list={list} setList={setList} />
     </div>
   );
 };
 
-export default Container;
+export default ListaDeTareas;
