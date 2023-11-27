@@ -10,10 +10,14 @@ const ListaDeTareas = () => {
     setList([...list, addItem]); 
   };
   return (
-    <div>
-      <TaskForm handleAddItem={handleAddItem} />
-      <TaskList list={list} setList={setList} />
-    </div>
+    <>
+      <div className="contenedor">
+        <TaskForm handleAddItem={handleAddItem} />
+      </div>
+      <div className="contenedor">
+        <TaskList list={list} setList={setList} />
+      </div>
+    </>
   );
 };
 

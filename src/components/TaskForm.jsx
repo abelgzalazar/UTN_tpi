@@ -17,8 +17,9 @@ const TaskForm = (props) => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div className="todo-list">
-        <div className="item-input">
+      <h1>Lista de tareas</h1>
+      <div className="taskform">
+        <div className="taskform-text">
           <TextField 
             className="text"
             label="Agregar una tarea..." 
@@ -26,12 +27,14 @@ const TaskForm = (props) => {
             variant="outlined"
             onChange={(e) => setDescription(e.target.value)}
           />
+        </div>
+        <div className="taskform-button">
           <Button
            type="submit"
            color="primary" 
            variant="contained" 
            disabled={description ? "" : "disabled"}
-           > Agregar tarea 
+           > Agregar 
           </Button>
         </div>
       </div>

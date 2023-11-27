@@ -1,0 +1,15 @@
+.contenedor{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.taskform{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.taskform-text{
+    padding: 10px;
+}
