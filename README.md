@@ -1,6 +1,6 @@
 Una vez clonado el proyecto, instalar npm y sus dependencias con el comando
 
-npm i @material-ui/core --legacy-peer-deps  npm i @material-ui/core --legacy-peer-deps  
+npm i @material-ui/core --legacy-peer-deps  
 
 /* NOTA
 npm install NO fuciona porque MaterialUI y la version 18 de React aun no se llevan bien *Los amigos de Google estan trabajando en eso*
