@@ -29,7 +29,7 @@ const TaskList = props => {
       {list.length ? chk : "No hay tareas pendientes"}
       {list.length ? (
         <p>
-          <Button color="secondary" variant="contained" onClick={onClickRemoveItem}> Eliminar todas las completadas! </Button>
+          <Button color="secondary" variant="contained" onClick={onClickRemoveItem}> Eliminar todas las tareas completadas! </Button>
         </p>
       ) : null}
     </div>
